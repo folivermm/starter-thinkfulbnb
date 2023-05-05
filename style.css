@@ -1,7 +1,6 @@
 /* -------  General Styles ------- */
-
 body {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 h2 {
@@ -26,31 +25,18 @@ section {
 }
 
 section.alternate-background {
-  background-color: #00a699;
+  background-color: #00A699;
   color: #fff;
 }
 
 main img {
-  width: 100px;
-}
-
-#host-image {
-  width: 100%;
-}
-
-.ideas img {
-  width: 100%;
-}
-
-#about img {
   width: 100%;
 }
 
 /* ---  Groups & Items --- */
-
 .group {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
 
 .item {
@@ -62,16 +48,17 @@ main img {
   flex: 2;
 }
 
+
 /* -------  Navigation ------- */
 header {
-  background-color: #ff385c;
-  padding: 20px 10px 0px 10px;
+  background-color: #FF385C;
+  padding: 20px 20px 0 20px;
   text-align: center;
 }
 
 .logo {
   font-family: "Pangolin", cursive;
-  font-size: 54px;
+  font-size: 72px;
   color: #fff;
 }
 
@@ -95,33 +82,33 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-  color: #faf8f8;
+  color: #bdbdbd;
   text-decoration: none;
 }
 
 /* -------  Search Form ------- */
 form {
-  border: 2px solid #ff385c;
+  border: 2px solid #FF385C;
   padding: 10px;
 }
-
-/* form div {
-  display: flex;
-  justify-content: center;
-} */
 
 form label {
   font-weight: bold;
 }
 
+form div {
+  display: flex;
+  justify-content: space-between;
+}
+
 form select,
 form input {
   margin-bottom: 20px;
-  width: 180px;
+  width: 150px;
 }
 
 form button {
-  background-color: #ff385c;
+  background-color: #FF385C;
   border: none;
   color: #fff;
   font-size: 24px;
@@ -129,11 +116,9 @@ form button {
   width: 100%;
 }
 
-
 /* -------  Footer ------- */
-
 footer {
-  background-color: #ff385c;
+  background-color: #FF385C;
 }
 
 footer p {
@@ -143,33 +128,32 @@ footer p {
 }
 
 /* -------  Media Query ------- */
-
-@media (min-width: 480px) {
-  body {
-    display: grid;
-  }
-
+@media all and (min-width: 480px) {
   header {
     display: flex;
     justify-content: space-between;
-    padding: 0;
+    padding: 0 10%;
+  }
+
+  .logo {
+    margin: 14px 0 14px 20px;
+    padding-top: 0;
+    font-size: 42px;
   }
 
   header nav ul {
     align-items: center;
   }
 
-  header nav ul li a {
-    color: white;
-    justify-content: space-between;
-    text-decoration: none;
-    padding: 0 20px 0 0;
+  .group {
+    display: flex;
+    flex-direction: column;
   }
 
   form {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
   }
 
   form div {
@@ -184,13 +168,4 @@ footer p {
   form input {
     margin-bottom: 0px;
   }
-
-  .group {
-    flex-direction: row;
-    align-items: center;
-  }
-
-  /* #about {
-    margin: auto;
-  } */
 }
