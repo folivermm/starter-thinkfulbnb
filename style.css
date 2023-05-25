@@ -179,12 +179,13 @@ footer p {
   }
 
   form button {
+    width: auto;
     /* margin-right: -10px; */
     /* flex: q;
-    width: auto; */
+    width: auto; 
     flex: 1;
-    margin-left: -5px;
-    margin-right: -5px;
+    /* margin-left: -5px; */
+    /* margin-right: -5px; */
   }
 
   form select,
@@ -203,17 +204,24 @@ footer p {
   form {
     flex-direction: column;
   }
+
+  form button {
+    flex-grow: inherit;
+    margin-top: 10px;
+  }
+
 }
 
 @media all and (min-width:901px) {
 
   form select,
   form input {
-    width: 110px;
+    width: 80%;
   }
 
   form div {
     flex-direction: column;
   }
+
 
 }
